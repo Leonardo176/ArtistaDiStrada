@@ -1,17 +1,17 @@
 package com.leonardomazzon.artistadistrada;
 
 /**
- * Questa classe ti consente di generare casualmente un intero
+ * This class allows you to generate randomy an Integer
  * @author Leonardo Mazzon 4CIA
  * @version 2.0
  */
 public class IntRand {
 	
 	/**
-	 * Genera casualmente un intero random
-	 * @param min Minimo intero generato 
-	 * @param max Massimo intero generato
-	 * @return Numero random compreso tra il minimo e il massimo
+	 * Generate randomly an integer
+	 * @param min Minimum integer generated
+	 * @param max Maximum integer generated
+	 * @return Random number between min and max
 	 */
 	public static int getRandInt(int min, int max) {
 		return (int) (min+(max-min+1)*Math.random());
