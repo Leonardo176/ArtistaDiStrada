@@ -13,7 +13,7 @@ public class Person extends Thread {
 		boolean done = false;	//when the painting has been done
 		
 		while(!done && timeUsed <= data.maxTime) {
-			timeGen = IntRand.getRandInt(1000, 10000);
+			timeGen = IntRand.getRandInt(100, 1000);
 			
 			try {
 				//waste some time
@@ -38,7 +38,7 @@ public class Person extends Thread {
 				
 				//the artist take some time to do the painting
 				try {
-					Thread.sleep(IntRand.getRandInt(1000, 10000));
+					Thread.sleep(IntRand.getRandInt(1000, 3000));
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -54,7 +54,7 @@ public class Person extends Thread {
 		
 		//if the person hasn't done the painting
 		if(!done) {
-			System.out.println(this.getName()+" has decided to give up because he has to do better things in his life");
+			System.out.println(this.getName()+" has decided to give up");
 		}
 	}
 }
