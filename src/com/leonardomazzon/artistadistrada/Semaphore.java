@@ -1,7 +1,7 @@
 package com.leonardomazzon.artistadistrada;
 
 public class Semaphore {
-	protected int s;
+	private int s;
 	
 	public Semaphore(int n) {
 		s = n;
