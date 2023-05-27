@@ -48,8 +48,13 @@ public class Person extends Thread {
 				//unlock the artist
 				data.artist.unlock();
 				
-				System.out.println("The artist has painted the person called: "+this.getName());
+				System.out.println("The artist has painted "+this.getName());
 			}
+		}
+		
+		//if the person hasn't done the painting
+		if(!done) {
+			System.out.println(this.getName()+" has decided to give up because he has to do better things in his life");
 		}
 	}
 }
