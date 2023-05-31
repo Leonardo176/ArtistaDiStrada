@@ -1,9 +1,9 @@
 package com.leonardomazzon.artistadistrada;
 
 public class Data {
-	public Semaphore artist;
-	public Semaphore chairs;
-	public final long maxTime;	//in ms
+	public Semaphore artist;	//mutex semaphore for painting one person at a time
+	public Semaphore chairs;	//counting semaphore for the people that are waiting on the chairs
+	public final long maxTime;	//max time for the people to get a painting from the artist
 	
 	/**
 	 * Constructor of class Data

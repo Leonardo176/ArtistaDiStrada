@@ -12,6 +12,15 @@ public class Person extends Thread {
 		long timeGen;
 		boolean done = false;	//when the painting has been done
 		
+		
+		//waste some time in order to arrive on the artist randomly
+		try {
+			Thread.sleep(IntRand.getRandInt(1000, (int) data.maxTime/2));
+		} catch (InterruptedException e1) {
+			e1.printStackTrace();
+		}
+		
+		//while it hasn't done the painting and is hasn't finished time
 		while(!done && timeUsed <= data.maxTime) {
 			timeGen = IntRand.getRandInt(100, 1000);
 			
